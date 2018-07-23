@@ -1,0 +1,24 @@
+#!/bin/sh -x
+
+#echo "Python boot-strap modules for machine cheyenne"
+#. /glade/u/apps/ch/opt/lmod/7.2.1/lmod/lmod/init/bash
+
+## Order is important!
+##module restore system
+module purge
+module load intel/17.0.4
+module load impi/17.0.3
+module load python/2.7.13
+module load netcdf/4.3.3.1
+module load ncl_ncarg/6.3.0
+module load nco
+module load hdf5
+module load udunits/2.2.25
+
+# one time:
+#pip install --user netCDF4
+
+# prepend the virtualenv into the PATH
+PATH=/opt/apps/intel17/python/2.7.13/lib/python2.7/site-packages/bin:${PATH}
+export PATH
+
