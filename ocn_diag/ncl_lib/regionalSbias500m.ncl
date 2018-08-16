@@ -189,5 +189,7 @@ begin
   panel_res@gsnPanelScalePlotIndex = 1
   gsn_panel(wks,plot,(/3,3/),panel_res)
    
+  exit()
+
 end
    

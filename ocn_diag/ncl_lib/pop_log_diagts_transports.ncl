@@ -165,4 +165,6 @@ begin
     delete([/data,year,yeartime,mass,heat,salt,mass_ann,heat_ann,salt_ann/])
 
   end do
+
+  exit()
 end

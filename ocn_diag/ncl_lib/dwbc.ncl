@@ -169,5 +169,8 @@ begin
   txres@txFontHeightF = 0.02    
   gsn_text_ndc(wks, "Mean Latitude = "+meanlat,0.35,0.24,txres)
   frame(wks)
+
+  exit()
+
  end
 

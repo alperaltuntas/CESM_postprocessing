@@ -119,4 +119,6 @@ begin
    panel_res@gsnPanelYF = (/-1,.50/)
    gsn_panel(wks,(/plot1,plot2/), (/2,1/),panel_res)
 
+  exit()
+
 end

@@ -101,4 +101,5 @@ begin
   panel_res@gsnPanelYWhiteSpacePercent = 3.0
   gsn_panel(wks,(/plot1,plot2,plot3,plot4,plot5/), (/5,1/),panel_res)
 
+  exit()
 end

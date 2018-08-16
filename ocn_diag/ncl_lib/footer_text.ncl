@@ -34,4 +34,6 @@ begin
   amres@amOrthogonalPosF = 0.03
   am2 = gsn_add_annotation(plot,tx2,amres)
 
+  exit()
+
 end

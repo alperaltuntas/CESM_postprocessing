@@ -58,4 +58,6 @@ begin
   curl(:,0) = curl(:,sx(1)-1)
 
   return curl
+
+  exit()
 end

@@ -182,4 +182,6 @@ begin
         delete([/salt1,salt2,salt_diff/])
       end if
    end do
+  exit()
+
 end

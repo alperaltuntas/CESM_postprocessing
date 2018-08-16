@@ -21,5 +21,7 @@ begin
    end if
    end if
    return arr
+  exit()
+
 end
 

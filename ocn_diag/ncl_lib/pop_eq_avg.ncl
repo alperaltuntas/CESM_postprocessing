@@ -24,5 +24,7 @@ begin
    end if
    
    return out
+  exit()
+
 end
 

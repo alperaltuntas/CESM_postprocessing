@@ -486,4 +486,6 @@ plot5 = gsn_csm_xy (wks,ymons,var_mon34,mvar)                  ; create plot
 
 frame(wks)
 
+exit()
+
 end

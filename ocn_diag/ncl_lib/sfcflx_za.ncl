@@ -298,4 +298,6 @@ do n=0, n_fields-1
     delete(field)
 end do
 
+  exit()
+
 end

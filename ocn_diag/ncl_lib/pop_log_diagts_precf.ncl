@@ -49,6 +49,8 @@ begin
 
   plot = gsn_csm_xy(wks,year,precf,res)
 
+  exit()
+
 end
 
 

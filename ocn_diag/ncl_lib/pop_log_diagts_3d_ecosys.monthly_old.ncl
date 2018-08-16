@@ -1056,4 +1056,6 @@ end if
   panel_res@gsnPaperOrientation = "portrait"
   gsn_panel(wks,(/plot1,plot2/), (/2,1/),panel_res)
 
+  exit()
+
 end

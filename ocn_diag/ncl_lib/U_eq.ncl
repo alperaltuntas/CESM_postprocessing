@@ -216,4 +216,6 @@ begin
    plot1 = gsn_csm_contour(wks,temp1(:z_max,:),res)  
    draw(plot1)
    frame(wks)
+  exit()
+
 end

@@ -172,4 +172,7 @@ begin
       delete([/pd1,pd2,pd_diff,pd_obs/])
 
    end do
+
+  exit()
+
 end

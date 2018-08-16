@@ -116,5 +116,6 @@ begin
   panel_res@gsnPaperOrientation = "portrait"
   gsn_panel(wks,(/plot1,plot2,plot3,plot4/), (/4,1/),panel_res)
 
+  exit()
 
 end

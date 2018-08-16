@@ -174,4 +174,6 @@ begin
       gsn_panel(wks,(/plot1,plot2,plot3/), (/3,1/),panel_res)
       delete([/uvel1,uvel2,uvel_diff,u_obs/])
    end do
+  exit()
+
 end

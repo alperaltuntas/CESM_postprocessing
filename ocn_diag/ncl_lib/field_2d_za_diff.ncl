@@ -92,4 +92,6 @@ begin
     delete([/data,field_1,field_2/])
   end do
 
+  exit()
+
 end

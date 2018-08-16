@@ -166,4 +166,6 @@ begin
       delete([/temp1,temp2,temp_diff,t_obs/])
 
    end do
+  exit()
+
 end

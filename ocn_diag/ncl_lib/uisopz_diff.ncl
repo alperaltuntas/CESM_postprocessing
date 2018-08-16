@@ -156,5 +156,7 @@ begin
      gsn_panel(wks,(/plot1,plot2/), (/2,1/),False)
    end do
    
+  exit()
+
 end
    

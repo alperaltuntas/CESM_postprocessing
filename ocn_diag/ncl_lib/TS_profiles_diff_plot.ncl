@@ -156,5 +156,8 @@ begin
                         missing, units(i), con_int_TRACER_RMS, dlev_TRACER_RMS(i,:), coltab_TRACER_RMS, opt)
     end do
   end do
+
+  exit()
+
 end
 

@@ -264,4 +264,6 @@ begin
 
   gsn_panel(wks,(/plot2,plot3, plot4/), (/1,3/),panel_res)
 
+  exit()
+
 end

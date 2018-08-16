@@ -78,4 +78,6 @@ begin
   fileid->TLONG = (/TLONG/)
   fileid->PD = (/PD/)
 
+  exit()
+
 end

@@ -84,5 +84,7 @@ begin
     print("no good values found")
   end if
 
+  exit()
+
 end
 

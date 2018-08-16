@@ -504,4 +504,6 @@ begin
   panel_res@gsnPanelScalePlotIndex = 1
   gsn_panel(wks,(/plot1,plot2/), (/2,1/),panel_res)
 
+  exit()
+
 end
