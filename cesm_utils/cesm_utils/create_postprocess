@@ -201,7 +201,7 @@ def create_env_file(envDict, configFile, tmplFile, envFile, obs_root, comp, stan
         
         for entry_tag in group_tag.findall('entry'):
             # check if the value needs to be inherited from the envDict
-            if entry_tag.get('value') == 'inherit':
+            if entry_tag.get('value') == 'inherit' and not entry_tag.get('id') == "POSTPROCESS_PATH_GEYSER":
                 xml_list.append(XmlEntry(entry_tag.get('id'), envDict[entry_tag.get('id')], 
                                          entry_tag.get('desc'), entry_tag.get('valid_values')))
             else:
