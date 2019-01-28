@@ -203,6 +203,8 @@ def get_hostname():
     index = hostname.find(".")
     if index > 0:
         hostname = hostname[0:index]
+        if hostname[0:5] == "login": # likely, stampede2:
+            hostname = platform.node().split('.')[1]
 
     return hostname
 
