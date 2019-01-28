@@ -143,10 +143,10 @@
   </machine>
 
   <machine name="stampede2" hostname="stampede2">
-    <timeseries_pes queue="regular" nodes="4" pes_per_node="12" wallclock="00:30:00">48</timeseries_pes>
-    <xconform_pes queue="regular" nodes="8" pes_per_node="4" wallclock="06:00:00">32</xconform_pes>
-    <mpi_command>srun</mpi_command>
-    <pythonpath></pythonpath>
+    <timeseries_pes queue="skx-normal" nodes="4" pes_per_node="12" wallclock="00:30:00">48</timeseries_pes>
+    <xconform_pes queue="skx-normal" nodes="8" pes_per_node="4" wallclock="06:00:00">32</xconform_pes>
+    <mpi_command>ibrun python</mpi_command>
+    <pythonpath>work/05743/altuntas/stampede2/CESM_postprocessing/cesm-env2/lib/python2.7/site-packages:/home1/05743/altuntas/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH</pythonpath>
     <f2py>f2py</f2py>
     <za>
       <compiler>ifort</compiler>
@@ -166,46 +166,46 @@
       <module>module load udunits/2.2.25</module>
     </reset_modules>
     <modules>
-      <module>module load intel/17.0.4</module>
-      <module>module load impi/17.0.3</module>
-      <module>module load python2/2.7.14</module>
-      <module>module load netcdf/4.3.3.1</module>
-      <module>module load ncl_ncarg/6.3.0</module>
-      <module>module load nco</module>
-      <module>module load hdf5</module>
-      <module>module load udunits/2.2.25</module>
+      <!-- <module>module load intel/17.0.4</module> -->
+      <!-- <module>module load impi/17.0.3</module> -->
+      <!-- <module>module load python2/2.7.14</module> -->
+      <!-- <module>module load netcdf/4.3.3.1</module> -->
+      <!-- <module>module load ncl_ncarg/6.3.0</module> -->
+      <!-- <module>module load nco</module> -->
+      <!-- <module>module load hdf5</module> -->
+      <!-- <module>module load udunits/2.2.25</module> -->
     </modules>
     <components>
       <component name="atm">
-	<averages_pes queue="regular" nodes="4" pes_per_node="18" wallclock="01:00:00">72</averages_pes>
-	<diagnostics_pes queue="regular" nodes="1" pes_per_node="18" wallclock="01:00:00">18</diagnostics_pes>
-	<regrid_pes queue="regular" nodes="1" pes_per_node="16" wallclock="01:00:00">36</regrid_pes>
+	<averages_pes queue="skx-normal" nodes="4" pes_per_node="9" wallclock="03:00:00">36</averages_pes>
+	<diagnostics_pes queue="skx-normal" nodes="2" pes_per_node="9" wallclock="02:00:00">18</diagnostics_pes>
+	<regrid_pes queue="skx-normal" nodes="1" pes_per_node="16" wallclock="01:00:00">36</regrid_pes>
 	<obs_root>/glade/p/cesm/amwg/amwg_data</obs_root>
       </component>
       <component name="ice">
-	<averages_pes queue="regular" nodes="4" pes_per_node="18" wallclock="01:00:00">72</averages_pes>
-	<diagnostics_pes queue="regular" nodes="1" pes_per_node="8" wallclock="01:00:00">8</diagnostics_pes>
+	<averages_pes queue="skx-normal" nodes="4" pes_per_node="9" wallclock="02:00:00">36</averages_pes>
+	<diagnostics_pes queue="skx-normal" nodes="1" pes_per_node="8" wallclock="01:00:00">8</diagnostics_pes>
 	<obs_root>/glade/p/cesm/pcwg/ice/data</obs_root>
       </component>
       <component name="lnd">
-	<averages_pes queue="regular" nodes="4" pes_per_node="18" wallclock="01:00:00">72</averages_pes>
-	<diagnostics_pes queue="regular" nodes="1" pes_per_node="16" wallclock="01:00:00">16</diagnostics_pes>
-	<regrid_pes queue="regular" nodes="1" pes_per_node="12" wallclock="01:00:00">12</regrid_pes>
+	<averages_pes queue="skx-normal" nodes="4" pes_per_node="18" wallclock="01:00:00">72</averages_pes>
+	<diagnostics_pes queue="skx-normal" nodes="1" pes_per_node="16" wallclock="01:00:00">16</diagnostics_pes>
+	<regrid_pes queue="skx-normal" nodes="1" pes_per_node="12" wallclock="01:00:00">12</regrid_pes>
 	<obs_root>/glade/p/cesm/lmwg/diag/lnd_diag_data</obs_root>
       </component>
       <component name="ocn">
-	<averages_pes queue="regular" nodes="4" pes_per_node="12" wallclock="01:00:00">48</averages_pes>
-	<diagnostics_pes queue="regular" nodes="1" pes_per_node="12" wallclock="01:00:00">12</diagnostics_pes>
+	<averages_pes queue="skx-normal" nodes="4" pes_per_node="2" wallclock="09:00:00">8</averages_pes>
+	<diagnostics_pes queue="skx-normal" nodes="2" pes_per_node="6" wallclock="02:00:00">12</diagnostics_pes>
 	<obs_root>/work/05743/altuntas/stampede2/CESM_postprocessing/</obs_root>
       </component>
       <component name="ilamb">
-	<diagnostics_pes queue="regular" nodes="1" pes_per_node="8" wallclock="00:30:00">8</diagnostics_pes>
-	<initialize_pes queue="share" nodes="1" pes_per_node="1" wallclock="00:01:00">1</initialize_pes>
+	<diagnostics_pes queue="skx-normal" nodes="1" pes_per_node="8" wallclock="00:30:00">8</diagnostics_pes>
+	<initialize_pes queue="skx-normal" nodes="1" pes_per_node="1" wallclock="00:01:00">1</initialize_pes>
 	<obs_root>/glade/p/cesm/lmwg_dev/oleson/ILAMB/ILAMB_all</obs_root>
       </component>
       <component name="iomb">
-	<diagnostics_pes queue="regular" nodes="1" pes_per_node="8" wallclock="00:30:00">8</diagnostics_pes>
-	<initialize_pes queue="share" nodes="1" pes_per_node="1" wallclock="00:01:00">1</initialize_pes>
+	<diagnostics_pes queue="skx-normal" nodes="1" pes_per_node="8" wallclock="00:30:00">8</diagnostics_pes>
+	<initialize_pes queue="skx-normal" nodes="1" pes_per_node="1" wallclock="00:01:00">1</initialize_pes>
 	<obs_root>/glade/p/cesm/omwg/obs_data/IOMB</obs_root>
       </component>
     </components>
