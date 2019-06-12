@@ -1,0 +1,10 @@
+#!/bin/bash -l
+
+echo "Python boot-strap modules for machine cheyenne"
+
+module load intel/2018b
+module load NCL
+module load NCO
+
+module list
+

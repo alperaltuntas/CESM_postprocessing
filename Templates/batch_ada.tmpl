@@ -1,0 +1,23 @@
+##########
+##
+## See https://github.com/NCAR/CESM_postprocessing/wiki for details
+## regarding settings for optimal performance for CESM postprocessing tools.
+##
+##########
+
+#BSUB -n {{ pes }}
+#BSUB -R "span[ptile={{ ppn }}]"
+#BSUB -q {{ queue }}
+#BSUB -N
+#BSUB -a poe
+#BSUB -J {{ processName }}
+#BSUB -W {{ wallclock }}
+#BSUB -P {{ project }} 
+#BSUB -L /bin/bash           #Uses the bash login shell to initialize the job's execution environment.
+#BSUB -R "rusage[mem=25000]"  #Request 25000MB per process (CPU) for the job
+
+. /sw/lmod/8.0.1/init/bash
+
+export MP_TIMEOUT=14400
+export MP_PULSE=1800
+export MP_DEBUG_NOTIMEOUT=yes
