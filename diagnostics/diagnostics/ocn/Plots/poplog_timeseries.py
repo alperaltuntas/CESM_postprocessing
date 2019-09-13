@@ -85,6 +85,15 @@ class PopLog(OceanDiagnosticPlot):
         # chdir into the  working directory
         os.chdir(env['WORKDIR'])
 
+        # update POP transport plots if high-res
+        if (env['RESOLUTION'] == 'tx0.1v2' or env['RESOLUTION'] == 'tx0.1v3') :
+            self._expectedPlots_transportDiags = [('Drake_Passage','diagts_transport.drake'), ('Mozambique_Channel','diagts_transport.mozam'), ('Bering_Strait','diagts_transport.bering'),
+                                                  ('Indonesian_Throughflow','diagts_transport.itf'),('Windward_Passage','diagts_transport.windward'),('Florida_Strait','diagts_transport.florida')]
+            self._expectedInFiles = ['diagts_3d.asc', 'diagts_cfc.asc', 'diagts_ecosys.asc', 'diagts_fwflux.asc', 'diagts_hflux.asc', 'diagts_info.asc', 'diagts_precfactor.asc',
+                                     'diagts_nino.asc', 'transports.bering.asc', 'transports.drake.asc', 'transports.florida.asc',
+                                     'transports.itf.asc', 'transports.mozambique.asc', 'transports.windward.asc']
+            
+
         for nclPlotFile in self._ncl:
             # copy the NCL command to the workdir
             shutil.copy2('{0}/{1}'.format(env['NCLPATH'],nclPlotFile), '{0}/{1}'.format(env['WORKDIR'], nclPlotFile))

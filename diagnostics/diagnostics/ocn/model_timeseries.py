@@ -252,7 +252,10 @@ class modelTimeseries(OceanDiagnostic):
                 dtFilesString = ' '.join(dtFiles)
 
                 # define the awk script to parse the dt log files
-                dtFilesAwkPath = '{0}/process_pop2_dtfiles.awk'.format(env['TOOLPATH'])
+                if (env['RESOLUTION'] == 'tx0.1v2' or env['RESOLUTION'] == 'tx0.1v3') :
+                    dtFilesAwkPath = '{0}/process_pop2_dtfiles_hires.awk'.format(env['TOOLPATH'])
+                else:
+                    dtFilesAwkPath = '{0}/process_pop2_dtfiles.awk'.format(env['TOOLPATH'])
                 dtFilesAwkCmd = '{0} {1}'.format(dtFilesAwkPath, dtFilesString).split(' ')
                 print('model_timeseries: dtFilesAwkCmd = {0}'.format(dtFilesAwkCmd))
 
