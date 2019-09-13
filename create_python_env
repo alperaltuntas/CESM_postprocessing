@@ -173,6 +173,7 @@ fi
 #----------------------------------------------------------------------
 echo "$progname - activating virtual environment in ${pp_dir}/cesm-env2."
 . cesm-env2/bin/activate
+pip install numpy==1.8.1
 
 #----------------------------------------------------------------------
 # install post processing packages
