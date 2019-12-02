@@ -1,10 +1,18 @@
 #!/bin/bash -l
 
-echo "Python boot-strap modules for machine cheyenne"
+echo "Loading modules for CESM_postprocessing tool..."
 
-module load intel/2018b
-module load NCL
+module purge
 module load NCO
+module load NCL
+module load intel/2017b
+module load python/2.7.13-intel-2017b
+module load HDF5/1.10.1-iimpi-2017b
+module load netCDF/4.5.0-intel-2017b
 
-module list
+source /ihesp/altuntas/CESM_postprocessing/cesm-env2/bin/activate
+export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing/pynio/site-packages:$PYTHONPATH
+export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH
+export PYNIOPATH=/ihesp/altuntas/CESM_postprocessing/pynio/site-packages/PyNIO
+
 
