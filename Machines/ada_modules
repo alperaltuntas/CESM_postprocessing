@@ -3,16 +3,15 @@
 echo "Loading modules for CESM_postprocessing tool..."
 
 module purge
-module load NCO
-module load NCL
-module load intel/2017b
-module load python/2.7.13-intel-2017b
-module load HDF5/1.10.1-iimpi-2017b
-module load netCDF/4.5.0-intel-2017b
+ml NCL/6.6.2-foss-2018b
+ml NCO/4.7.9-foss-2018b
+ml netCDF/4.6.1-foss-2018b-cdf5
+#ml python/2.7.13-generic
+ml Python/2.7.15-foss-2018b
 
-source /ihesp/altuntas/CESM_postprocessing/cesm-env2/bin/activate
-export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing/pynio/site-packages:$PYTHONPATH
-export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH
-export PYNIOPATH=/ihesp/altuntas/CESM_postprocessing/pynio/site-packages/PyNIO
+source /ihesp/altuntas/CESM_postprocessing_cdf5/cesm-env2/bin/activate
+export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/site-packages:$PYTHONPATH
+export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH
+export PYNIOPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/site-packages/PyNIO
 
 

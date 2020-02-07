@@ -339,7 +339,7 @@
     <xconform_pes  queue="mn_small" nodes="1" pes_per_node="3" wallclock="6:00" memory="18000">3</xconform_pes>
     <mpi_command>mpirun</mpi_command>
     <pythonpath></pythonpath>
-    <f2py>f2py</f2py> <!-- TODO: check -->
+    <f2py fcompiler="gfortran" f77exec="/sw/eb/software/GCCcore/7.3.0/bin/gfortran">f2py</f2py>
     <za>
       <compiler>ifort</compiler>
       <flags>-c -g -O2</flags>
@@ -350,15 +350,13 @@
       <module>module purge</module>
     </reset_modules>
     <modules>
-      <module>module load intel/2018b</module>
-      <module>module load NCL</module>
-      <module>module load NCO</module>
-      <module>module load python/2.7.13-intel-2017b</module>
-      <module>module load HDF5/1.10.1-iimpi-2017b</module>
-      <module>module load netCDF/4.5.0-intel-2017b</module>
-      <module>export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing/pynio/site-packages:$PYTHONPATH</module>
-      <module>export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH</module>
-      <module>export PYNIOPATH=/ihesp/altuntas/CESM_postprocessing/pynio/site-packages/PyNIO</module>
+      <module>ml NCL/6.6.2-foss-2018b</module>
+      <module>ml NCO/4.7.9-foss-2018b</module>
+      <module>ml netCDF/4.6.1-foss-2018b-cdf5</module>
+      <module>ml Python/2.7.15-foss-2018b</module>
+      <module>export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/site-packages:$PYTHONPATH</module>
+      <module>export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH</module>
+      <module>export PYNIOPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/site-packages/PyNIO</module>
     </modules>
     <components>
       <component name="atm">
