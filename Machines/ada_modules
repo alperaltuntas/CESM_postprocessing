@@ -9,9 +9,10 @@ ml netCDF/4.6.1-foss-2018b-cdf5
 #ml python/2.7.13-generic
 ml Python/2.7.15-foss-2018b
 
-source /ihesp/altuntas/CESM_postprocessing_cdf5/cesm-env2/bin/activate
-export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/site-packages:$PYTHONPATH
-export PYTHONPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH
-export PYNIOPATH=/ihesp/altuntas/CESM_postprocessing_cdf5/pynio/site-packages/PyNIO
+
+source [YOUR-CESM-PP-DIR]/cesm-env2/bin/activate
+export PYTHONPATH=[YOUR-CESM-PP-DIR]/pynio/site-packages:$PYTHONPATH
+export PYTHONPATH=[YOUR-CESM-PP-DIR]/pynio/build/lib.linux-x86_64-2.7/PyNIO:$PYTHONPATH
+export PYNIOPATH=[YOUR-CESM-PP-DIR]/pynio/site-packages/PyNIO
 
 
